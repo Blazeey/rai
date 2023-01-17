@@ -153,7 +153,6 @@ func initConfig() {
 	opts := []config.Option{
 		config.AppName("rai"),
 		config.ColorMode(isColor),
-		config.ConfigString(configContent),
 	}
 	if appSecret != "" {
 		opts = append(opts, config.AppSecret(appSecret))

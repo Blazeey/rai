@@ -1,0 +1,11 @@
+rai:
+  version: 0.2
+  image: aliamir51/generic
+resources:
+  cpu:
+    architecture: arm64
+commands:
+  build:
+    - echo "Hello"
+    - ls
+    - pwd

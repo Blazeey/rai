@@ -1,0 +1,43 @@
+app:
+  name: rai
+  verbose: true
+  debug: true
+aws:
+  access_key_id: ==AES32==PT1BRVMzMj09AfuM5wmjJ2elhJ45zgGPuTs3mOmyLsJROb9tBNg1Xn0htj7wKnJ0Iol+UBA=
+  secret_access_key: ==AES32==PT1BRVMzMj09nWGna+85QaK61/UL03ck3Zga+/EeJYUY80KD/LxXUTM906SBRSH5nXsXJTqfFLNLX/QyYgBrPZQc1TeTQHR2W31jhecQqQjN
+  region: us-east-1
+  sts_account: 212521765483
+  sts_role: Student
+  sts_role_duration_seconds: 15m
+store:
+  provider: s3
+  base_url: http://s3.amazonaws.com
+  acl: public-read
+client:
+  name: rai
+  upload_bucket: rai-ub
+  bucket: rai-ub-userdata
+  build_file: rai_build
+  rai_queue_name: rai-ub
+database:
+  endpoints:
+    - ec2-174-129-175-255.compute-1.amazonaws.com
+  username: rai-client
+  password: ==AES32==PT1BRVMzMj09QCSin7AZyGxVTn18FAv3hzGxwK3wQ67/3O/lQ/N1pvP7tQiB
+auth:
+    provider: auth0
+    domain: dev-vgheps80wxillgnb.us.auth0.com
+    client_id: ==AES32==PT1BRVMzMj09cNDwqbRTe5+Mzozjioq0ge1pbA4rorWt1IPltxQHeJ4hwQxeiZF1c2e18UNxSlZ6TxxQSMzUUjvvemyK
+    client_secret: ==AES32==PT1BRVMzMj09vs1unT4key1buNkoxY3f5DxaFYkVKRDk0nwQ4XIM3oSPfUl6TXLVT/xVXgsFh+ES+s+qg2qLlVs4VJPYIx0KUYSuikrIpl/29Ke/bGiBdOJVfE/xrkh9HXrD6z20cXkN7xHmOt9+2ko=
+pubsub:
+  endpoints:
+    - ec2-174-129-175-255.compute-1.amazonaws.com:6379
+  password: ==AES32==PT1BRVMzMj09o7tEuqXvvNb5pQS2OyFNSw2eKBs6WLOh+TWmlExfGierpyBn
+logger:
+  level: debug
+  hooks:
+    - kenisis
+    - syslog
+    - logz
+logz:
+  token: OmLzhrMXbNtcInvRARMWyibyHHLLjFZi
